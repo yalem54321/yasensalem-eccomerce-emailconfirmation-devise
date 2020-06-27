@@ -10,7 +10,6 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise'
 gem 'bootstrap_form'
 gem "haml"
-gem 'figaro'
 gem 'stripe-rails'
 gem "money-rails"
 # Use Puma as the app server
