@@ -19,7 +19,8 @@
     <% else # user not signed it %>
       <li ><%= link_to 'Login', login_path %></li>
       <li ><%= link_to 'Signup', signup_path %></li>
-	 
-	      <% end # if user is signed it %>
+	  
+	<li ><%= link_to 'Courses', orders_path %></li>
+	 	      <% end # if user is signed it %>
   </ul>
 </div><!-- navbar-collapse -->
