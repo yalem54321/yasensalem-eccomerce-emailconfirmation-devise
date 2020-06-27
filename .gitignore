@@ -30,8 +30,4 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# Custom ignored files
-/config/application.yml
 
-# Ignore application configuration
-/config/application.yml
