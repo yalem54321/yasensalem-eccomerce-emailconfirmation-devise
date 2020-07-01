@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :prepare_new_order, only: [:paypal_create_payment, :paypal_create_subscription]
 
-  SUCCESS_MESSAGE = 'Order Performed Successfully!'
+  SUCCESS_MESSAGE = 
   FAILURE_MESSAGE = 'Oops something went wrong. Please call the administrator'
 
   def index
@@ -24,13 +24,12 @@ class OrdersController < ApplicationController
     if @order&.save
       if @order.paid?
         # Success is rendere when order is paid and saved
-        return render html: SUCCESS_MESSAGE
+        redirect_to "https://vectoredu.herokuapp.com/login"
       elsif @order.failed? && !@order.error_message.blank?
         # Render error only if order failed and there is an error_message
         return render html: @order.error_message
       end
     end
-    render html: FAILURE_MESSAGE
   end
 
   def paypal_create_payment
