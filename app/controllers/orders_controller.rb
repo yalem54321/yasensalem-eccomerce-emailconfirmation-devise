@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
     if @order&.save
       if @order.paid?
         # Success is rendere when order is paid and saved
-        redirect_to "https://vectoredu.herokuapp.com/login"
+        redirect_to "https://yasensalem.herokuapp.com"
       elsif @order.failed? && !@order.error_message.blank?
         # Render error only if order failed and there is an error_message
         return render html: @order.error_message
