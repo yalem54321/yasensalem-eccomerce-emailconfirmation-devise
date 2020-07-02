@@ -15,7 +15,7 @@ gem 'stripe-rails'
 gem "money-rails"
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 gem 'jquery-rails'
